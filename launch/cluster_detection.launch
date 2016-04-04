@@ -1,0 +1,8 @@
+<launch>
+
+  <node name="clusters_detection" pkg="object_recognition_core" type="detection" args="-c $(find tiago_clusters)/config/detection.clusters.ros.ork.tiago" />
+  <!-- <node name="clusters_detection" pkg="object_recognition_core" type="detection" args="-c $(find tiago_clusters)/config/detection.clusters.ros.ork.tiago.throtled" /> -->
+  <node name="cluster_to_pose" pkg="object_recognition_clusters" type="clusters_to_pose.py" output="screen" />
+
+
+</launch>
